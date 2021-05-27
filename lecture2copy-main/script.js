@@ -16,7 +16,7 @@ function init() {
 
     // create a scene and a camera
     scene = new THREE.Scene()
-    scene.background = new THREE.Color(1,1,1)
+    scene.background = new THREE.Color(0.10,0,0.1)
     var aspect = window.innerWidth / window.innerHeight;
     var d = 300;
     camera = new THREE.OrthographicCamera( - d * aspect, d * aspect, d, - d, -20000, 20000 );
@@ -34,7 +34,7 @@ function init() {
     const directionalLight = new THREE.DirectionalLight( 0xffffff )
     directionalLight.position.set( 0, 0, 2 )
     directionalLight.castShadow = false
-    directionalLight.intensity = 3
+    directionalLight.intensity = 1.3
     scene.add( directionalLight )
 
     raycaster = new THREE.Raycaster()
@@ -49,8 +49,12 @@ function init() {
         console.log( object )
 
     } )
+    
 
 }
+
+
+
 
 function onClick( event ) {
 
